@@ -1,17 +1,41 @@
+body
+    background-color: #8BC6EC
+    background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%)
+
 .container
     max-width: 100%
 
 .quotegenerator
     width: 750px
     display: flex
+    align-items: center
+    justify-content: center
+    flex-direction: column
+    height: 100vh
     margin: 0 auto
    
     flex-direction: column
     &__textarea
+        padding: 120px
         display: flex
+        flex-direction: column
         border: 1px solid black
         &-quotes
-            
+            text-align: center
             margin: 0 auto
+            margin-bottom: 20px
+            &__author
+                margin: 0 auto
     &_button
+
         margin: 0 auto
+        margin-top: 10px
+    &__buttonn
+        width: 150px
+        height: 50px
+        background-image: linear-gradient(to right, #AA076B 0%, #61045F 51%, #AA076B 100%)
+        border: none
+        border-radius: 10px;
+        color: white
+        cursor: pointer
+        
