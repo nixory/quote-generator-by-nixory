@@ -3,26 +3,30 @@
 const axios = require('axios')
 const cheerio = require('cheerio')
 
-const generate = () => {
-
+//const generate = () => { 
+    
     axios.get('https://www.forbes.ru/forbeslife/dosug/262327-na-vse-vremena-100-vdokhnovlyayushchikh-tsitat').then(html => {
-        const $ = cheerio.load(html.data)
-        var text = ''
-        $(`#article_262327 > div._2LS9B > div._1eYTt > p:nth-child(${Math.floor(Math.random()*150)})`).each((i, elem) => {
-            text += `${$(elem).text()}\n`
-            let quotes = {
-                text:
-            }
-            console.log(quotes)
+            const $ = cheerio.load(html.data)
+            
+            var text = ''
+            $(`#article_262327 > div._2LS9B > div._1eYTt > p:nth-child(${Math.floor(Math.random() * (Math.floor(100) - Math.ceil(1)) + Math.ceil(1))}) > span > b`).each((i, elem) => {
+                text += `${$(elem).text()}\n`
+                console.log(text)
+                
+                var quotes = {
+                    "Наполеон Хилл, журналист и писатель ":text
+                    
+                }
+                console.log(quotes)
+            })
+            
         })
         
         
-    })
-
-}
+//}
 
 
-const generate = () => {
+const generates = () => {
     let quotes = {
         "Наполеон Хилл, журналист и писатель ":text
     }
